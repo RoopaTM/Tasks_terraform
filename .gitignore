@@ -1,0 +1,3 @@
+virtual-machine/*.tfstate
+virtual-machine/*.backup
+
