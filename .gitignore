@@ -1,3 +1,10 @@
+composit_datatype/*.tfstate
+composit_datatype/*.backup
+
+metaarguments/*.tfstate
+metaarguments/*.backup
+
+
 virtual-machine/*.tfstate
 virtual-machine/*.backup
 
