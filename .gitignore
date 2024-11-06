@@ -9,10 +9,30 @@ metaarguments/*.tfstate
 metaarguments/*.backup
 metaarguments/*.txt
 
-virtual-machine/*.tfstate
-virtual-machine/*.backup
+create-azure-resources-1main/*.tfstate
+create-azure-resources-1main/*.backup
+create-azure-resources-1main/**/*.tfstate
+create-azure-resources-1main/**/*.tfstate.*
+create-azure-resources-1main/**/*.backup
 
+# Ignore the .terraform directory (except for Git LFS files)
+.terraform/
 
+# Ignore Terraform plan files
+*.tfplan
+*.tfvars
+
+# Ignore Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore crash log files
+crash.log
+
+# Ignore .terraform.lock.hcl file
+.terraform.lock.hcl
 
 create_container_res/*.tfstate
 create_container_res/*.backup
