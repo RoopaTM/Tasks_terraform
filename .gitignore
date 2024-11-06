@@ -39,3 +39,11 @@ create_container_res/*.backup
 .terraform/
 *.zip
 *.tar.gz
+
+
+
+
+create_Azure-Resources-withTF/*.tfstate
+create_Azure-Resources-withTF/*.backup
+create_Azure-Resources-withTF/**/*.tfstate.*
+create_Azure-Resources-withTF/**/*.backup
