@@ -65,7 +65,7 @@ variable "sku" {
 
 
 variable "vm_name" {
-  default = "Roopatm-ubantu-TF"
+  default = "roopatm-ubantu-TF"
 }
 
 

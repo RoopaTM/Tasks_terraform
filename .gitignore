@@ -15,6 +15,7 @@ create-azure-resources-1main/**/*.tfstate
 create-azure-resources-1main/**/*.tfstate.*
 create-azure-resources-1main/**/*.backup
 
+
 # Ignore the .terraform directory (except for Git LFS files)
 .terraform/
 
@@ -41,10 +42,3 @@ create_container_res/*.backup
 *.tar.gz
 
 
-
-
-create_Azure-Resources-withTF/*.tfstate
-create_Azure-Resources-withTF/*.backup
-create_Azure-Resources-withTF/**/*.tfstate.*
-create_Azure-Resources-withTF/**/*.backup
-create_Azure-Resources-withTF/**/*.tfstate
