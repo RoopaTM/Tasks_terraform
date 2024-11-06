@@ -1,5 +1,8 @@
 composit_datatype/*.tfstate
 composit_datatype/*.backup
+composit_datatype/*.txt
+
+
 
 metaarguments/*.tfstate
 metaarguments/*.backup
