@@ -16,3 +16,5 @@ virtual-machine/*.backup
 create_container_res/*.tfstate
 create_container_res/*.backup
 .terraform/
+*.zip
+*.tar.gz
