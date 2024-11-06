@@ -1,10 +1,10 @@
 resource "local_file" "numbertype" {
-  filename = "file1.txt"
+  filename = "roopafile1.txt"
   content  = var.number_type
 }
 
 resource "local_file" "listdataType" {
-  filename = "file2.txt"
+  filename = "roopafile2.txt"
   content  = var.list_datatype[0]
 }
 
