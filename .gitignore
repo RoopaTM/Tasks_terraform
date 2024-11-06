@@ -16,6 +16,14 @@ create-azure-resources-1main/**/*.tfstate.*
 create-azure-resources-1main/**/*.backup
 
 
+remote-backend-stateManagement/*.tfstate
+remote-backend-stateManagement/**/*.tfstate.*
+remote-backend-stateManagement/**/*.tfstate
+remote-backend-stateManagement/**/*.backup
+remote-backend-stateManagement/*.backup
+
+
+
 # Ignore the .terraform directory (except for Git LFS files)
 .terraform/
 
