@@ -47,3 +47,4 @@ create_Azure-Resources-withTF/*.tfstate
 create_Azure-Resources-withTF/*.backup
 create_Azure-Resources-withTF/**/*.tfstate.*
 create_Azure-Resources-withTF/**/*.backup
+create_Azure-Resources-withTF/**/*.tfstate

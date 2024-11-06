@@ -1,11 +1,11 @@
-variable "resourcegroup_name" {
+variable "resource_group_name" {
   default = "roopa_terraform_rg"
 }
 
 
 
 variable "location" {
-  default = "westus"
+  default = "East US 2"
 }
 
 
@@ -32,7 +32,7 @@ variable "subnet_space" {
 
 
 variable "subnet_name" {
-  default = "terraform_subnetnet"
+  default = "roopa_terraform_subnetnet"
 }
 
 
@@ -65,7 +65,7 @@ variable "sku" {
 
 
 variable "vm_name" {
-  default = "Roopa-ubantu-TF"
+  default = "Roopatm-ubantu-TF"
 }
 
 
