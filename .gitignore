@@ -2,7 +2,8 @@ composit_datatype/*.tfstate
 composit_datatype/*.backup
 composit_datatype/*.txt
 
-
+modules/*.tfstate
+modules/*.backup
 
 metaarguments/*.tfstate
 metaarguments/*.backup
