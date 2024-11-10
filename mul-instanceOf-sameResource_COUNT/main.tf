@@ -17,7 +17,7 @@ provider "azurerm" {
 
 
 
-resource "azurerm_resource_group" "new_rg" {
+resource "azurerm_resource_group" "resgroup" {
   name     = "roopa_rg"
   location = "West US 2"
 }
@@ -25,13 +25,13 @@ resource "azurerm_resource_group" "new_rg" {
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.new_rg.location
-  resource_group_name = azurerm_resource_group.new_rg.name
+  location            = azurerm_resource_group.resgroup.location
+  resource_group_name = azurerm_resource_group.resgroup.name
 }
 
 resource "azurerm_subnet" "subnet" {
   name                 = "subnet"
-  resource_group_name  = azurerm_resource_group.new_rg.name
+  resource_group_name  = azurerm_resource_group.resgroup.name 
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/24"]
 }
@@ -39,11 +39,12 @@ resource "azurerm_subnet" "subnet" {
 resource "azurerm_network_interface" "nic" {
   count               = 3
   name                = "nic-${count.index + 1}"
-  location            = azurerm_resource_group.new_rg.location
-  resource_group_name = azurerm_resource_group.new_rg.name
+  location            = azurerm_resource_group.resgroup.location 
+  resource_group_name = azurerm_resource_group.resgroup.name
+
 
   ip_configuration {
-    name                          = "internal-${count.index + 1}"
+    name                          = "ip-${count.index + 1}"
     subnet_id                     = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
   }
@@ -52,8 +53,8 @@ resource "azurerm_network_interface" "nic" {
 resource "azurerm_linux_virtual_machine" "vm" {
   count               =2 
   name                = "vm-${count.index + 1}"
-  location            = azurerm_resource_group.new_rg.location
-  resource_group_name = azurerm_resource_group.new_rg.name
+  location            = azurerm_resource_group.resgroup.location 
+  resource_group_name = azurerm_resource_group.resgroup.name
   size                = "Standard_B1s"
   admin_username      = "azureuser"
 
