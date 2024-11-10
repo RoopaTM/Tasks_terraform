@@ -46,7 +46,7 @@ resource "azurerm_container_registry_token" "token" {
 data "azurerm_container_registry_scope_map" "scope" {
   name                    = "_repositories_pull"
   resource_group_name     = data.azurerm_resource_group.registry.name
-  container_registry_name = data.azurerm_container_registry.tfreg.name
+  container_registry_name = azurerm_container_registry.tfreg.name
 }
 
 resource "azurerm_container_registry_token_password" "pwd" {
