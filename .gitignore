@@ -23,6 +23,15 @@ remote-backend-stateManagement/**/*.backup
 remote-backend-stateManagement/*.backup
 
 
+mul-instanceOf-sameResource/*.tfstate
+mul-instanceOf-sameResource/**/*.tfstate.*
+mul-instanceOf-sameResource/**/*.tfstate
+mul-instanceOf-sameResource/**/*.backup
+mul-instanceOf-sameResource/*.backup
+
+
+
+
 
 # Ignore the .terraform directory (except for Git LFS files)
 .terraform/
